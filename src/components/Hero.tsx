@@ -38,13 +38,13 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="space-y-6">
-          <h1 className="text-6xl md:text-8xl font-orbitron font-bold neon-text animate-neon-flicker">
+          <h1 className={`text-6xl md:text-8xl font-jetbrains font-bold neon-text ${isVisible ? 'typing-text show' : 'typing-text'}`}>
             NeuroNinjas
           </h1>
-          <h2 className="text-3xl md:text-4xl font-orbitron font-semibold text-gradient">
+          <h2 className="text-3xl md:text-4xl font-jetbrains font-semibold text-gradient">
             AIML Club
           </h2>
-          <p className="text-xl md:text-2xl font-rajdhani text-foreground/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl font-space text-foreground/90 max-w-2xl mx-auto leading-relaxed">
             Unleashing the Power of 
             <span className="neon-green-text font-semibold"> Artificial Intelligence </span>
             & 
@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="pt-8">
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-cyber-blue hover:bg-cyber-blue/90 text-deep-space font-orbitron font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
+              className="bg-cyber-blue hover:bg-cyber-blue/90 text-deep-space font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
             >
               Join the Revolution
             </Button>

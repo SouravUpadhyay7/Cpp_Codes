@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -61,7 +61,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', href: '#', color: 'text-cyber-blue' },
     { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'text-neon-green' },
-    { icon: Twitter, label: 'Twitter', href: '#', color: 'text-electric-red' }
+    { icon: X, label: 'X', href: '#', color: 'text-electric-red' }
   ];
 
   return (

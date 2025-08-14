@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -135,16 +135,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-rajdhani;
-    font-family: 'Rajdhani', sans-serif;
+    @apply bg-background text-foreground font-space;
+    font-family: 'Space Grotesk', sans-serif;
   }
 
-  .font-orbitron {
-    font-family: 'Orbitron', monospace;
+  .font-jetbrains {
+    font-family: 'JetBrains Mono', monospace;
   }
 
-  .font-rajdhani {
-    font-family: 'Rajdhani', sans-serif;
+  .font-space {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
@@ -340,6 +340,16 @@
   50% { opacity: 0.8; }
 }
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: hsl(var(--cyber-blue)); }
+}
+
 /* Utility Animations */
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -359,4 +369,17 @@
 
 .animate-neon-flicker {
   animation: neon-flicker 3s ease-in-out infinite;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid hsl(var(--cyber-blue));
+  animation: typing 3s steps(12) 1s forwards, blink 1s infinite;
+  width: 0;
+}
+
+.typing-text.show {
+  animation: typing 3s steps(12) forwards, blink 1s infinite 3s;
 }

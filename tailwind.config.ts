@@ -71,8 +71,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				'orbitron': ['Orbitron', 'monospace'],
-				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'jetbrains': ['JetBrains Mono', 'monospace'],
+				'space': ['Space Grotesk', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
