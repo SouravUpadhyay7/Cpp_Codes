@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Users } from 'lucide-react';
+import deepLearningImg from '@/assets/event-deep-learning.jpg';
+import aiEthicsImg from '@/assets/event-ai-ethics.jpg';
+import computerVisionImg from '@/assets/event-computer-vision.jpg';
 
 const UpcomingEvents = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +18,8 @@ const UpcomingEvents = () => {
       time: "2:00 PM - 5:00 PM",
       attendees: "50+ Expected",
       level: "Beginner to Intermediate",
-      slug: "deep-learning-workshop"
+      slug: "deep-learning-workshop",
+      image: deepLearningImg
     },
     {
       id: 2,
@@ -25,7 +29,8 @@ const UpcomingEvents = () => {
       time: "10:00 AM - 4:00 PM",
       attendees: "100+ Expected",
       level: "All Levels",
-      slug: "ai-ethics-symposium"
+      slug: "ai-ethics-symposium",
+      image: aiEthicsImg
     },
     {
       id: 3,
@@ -35,7 +40,8 @@ const UpcomingEvents = () => {
       time: "9:00 AM - 9:00 AM",
       attendees: "75+ Teams",
       level: "Intermediate to Advanced",
-      slug: "computer-vision-hackathon"
+      slug: "computer-vision-hackathon",
+      image: computerVisionImg
     }
   ];
 
@@ -85,11 +91,18 @@ const UpcomingEvents = () => {
             >
               <div className="cyber-card p-6 rounded-2xl h-full flex flex-col group glow-green-hover hover:scale-105 transition-all duration-500">
                 <div className="flex-1">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium">
-                      {event.level}
-                    </span>
-                    <div className="w-8 h-8 bg-electric-red/20 rounded-full animate-pulse" />
+                  <div className="relative mb-4 rounded-lg overflow-hidden">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium backdrop-blur-sm">
+                        {event.level}
+                      </span>
+                    </div>
+                    <div className="absolute top-2 right-2 w-8 h-8 bg-electric-red/20 rounded-full animate-pulse backdrop-blur-sm" />
                   </div>
                   
                   <h3 className="text-2xl font-orbitron font-bold text-gradient mb-3">
