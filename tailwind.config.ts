@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom NeuroNinjas Theme Colors
+				'cyber-blue': 'hsl(var(--cyber-blue))',
+				'neon-green': 'hsl(var(--neon-green))', 
+				'electric-red': 'hsl(var(--electric-red))',
+				'deep-space': 'hsl(var(--deep-space))',
+				'dark-matter': 'hsl(var(--dark-matter))',
+				'cosmic-purple': 'hsl(var(--cosmic-purple))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +69,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'monospace'],
+				'rajdhani': ['Rajdhani', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

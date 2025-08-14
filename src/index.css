@@ -1,42 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* NeuroNinjas AIML Club Design System - Futuristic Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark Blue Primary */
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card Colors */
+    --card: 230 35% 9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover */
+    --popover: 230 35% 9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Cyber Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 230 35% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Neon Green */
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 230 35% 7%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted */
+    --muted: 230 35% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Electric Red */
+    --accent: 348 83% 47%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and Inputs */
+    --border: 230 35% 20%;
+    --input: 230 35% 15%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --cyber-blue: 217 91% 60%;
+    --neon-green: 174 72% 56%;
+    --electric-red: 348 83% 47%;
+    --deep-space: 230 35% 7%;
+    --dark-matter: 230 35% 9%;
+    --cosmic-purple: 271 81% 56%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-space)), hsl(var(--cyber-blue) / 0.3), hsl(var(--neon-green) / 0.2));
+    --gradient-card: linear-gradient(145deg, hsl(var(--dark-matter)), hsl(var(--cyber-blue) / 0.1));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--cyber-blue)), hsl(var(--neon-green)));
+    --gradient-red-accent: linear-gradient(90deg, hsl(var(--electric-red)), hsl(var(--cyber-blue)));
+    
+    /* Shadows and Glows */
+    --glow-blue: 0 0 20px hsl(var(--cyber-blue) / 0.5);
+    --glow-green: 0 0 20px hsl(var(--neon-green) / 0.5);
+    --glow-red: 0 0 20px hsl(var(--electric-red) / 0.5);
+    --shadow-cyber: 0 8px 32px hsl(var(--cyber-blue) / 0.2);
+    --shadow-deep: 0 25px 50px hsl(var(--deep-space) / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --animation-duration: 0.3s;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +135,228 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rajdhani;
+    font-family: 'Rajdhani', sans-serif;
   }
+
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .neon-text {
+    text-shadow: 
+      0 0 5px hsl(var(--cyber-blue) / 0.8),
+      0 0 10px hsl(var(--cyber-blue) / 0.6),
+      0 0 20px hsl(var(--cyber-blue) / 0.4),
+      0 0 40px hsl(var(--cyber-blue) / 0.2);
+  }
+
+  .neon-green-text {
+    text-shadow: 
+      0 0 5px hsl(var(--neon-green) / 0.8),
+      0 0 10px hsl(var(--neon-green) / 0.6),
+      0 0 20px hsl(var(--neon-green) / 0.4);
+  }
+
+  .neon-red-text {
+    text-shadow: 
+      0 0 5px hsl(var(--electric-red) / 0.8),
+      0 0 10px hsl(var(--electric-red) / 0.6),
+      0 0 20px hsl(var(--electric-red) / 0.4);
+  }
+
+  .cyber-border {
+    border: 2px solid hsl(var(--cyber-blue) / 0.3);
+    box-shadow: 
+      0 0 10px hsl(var(--cyber-blue) / 0.2),
+      inset 0 0 10px hsl(var(--cyber-blue) / 0.1);
+  }
+
+  .cyber-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--cyber-blue) / 0.2);
+    box-shadow: var(--shadow-cyber);
+    backdrop-filter: blur(10px);
+  }
+
+  .glow-hover:hover {
+    box-shadow: var(--glow-blue);
+    transform: translateY(-2px);
+  }
+
+  .glow-green-hover:hover {
+    box-shadow: var(--glow-green);
+    transform: translateY(-2px);
+  }
+
+  .glow-red-hover:hover {
+    box-shadow: var(--glow-red);
+    transform: translateY(-2px);
+  }
+
+  /* Animated Background */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-smooth);
+  }
+
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: var(--transition-smooth);
+  }
+
+  .fade-in-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: var(--transition-smooth);
+  }
+
+  .fade-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: var(--transition-bounce);
+  }
+
+  .scale-in.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-red {
+    background: var(--gradient-red-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                var(--gradient-accent) border-box;
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px hsl(var(--cyber-blue) / 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 30px hsl(var(--cyber-blue) / 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Utility Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.4s ease-out;
+}
+
+.animate-neon-flicker {
+  animation: neon-flicker 3s ease-in-out infinite;
 }
