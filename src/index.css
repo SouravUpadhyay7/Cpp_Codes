@@ -213,7 +213,7 @@
       linear-gradient(hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--cyber-blue) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: grid-move 20s linear infinite;
+    animation: none !important;
   }
 
   /* Scroll Animations */
