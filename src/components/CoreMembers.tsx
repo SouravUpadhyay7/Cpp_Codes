@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import member1 from '@/assets/member-1.jpg';
-import member2 from '@/assets/member-2.jpg';
-import member3 from '@/assets/member-3.jpg';
+import member1 from '@/assets/members pic/member-1.jpg';
+import member2 from '@/assets/members pic/member-2.jpg';
+import member3 from '@/assets/members pic/member-3.jpg';
+
 
 const CoreMembers = () => {
   const [isVisible, setIsVisible] = useState(false);

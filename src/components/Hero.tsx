@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import heroBackground from '@/assets/hero-background.jpg';
+import heroBackground from '@/assets/bg pics/aimlbg.jpg';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ const Hero = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: 'smooth' });  
   };
 
   return (
@@ -52,7 +52,7 @@ const Hero = () => {
           </p>
           <div className="pt-8">
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://chat.whatsapp.com/DQA3MGg0RakFMx7s2yoJBJ', '_blank')}
               className="bg-cyber-blue hover:bg-cyber-blue/90 text-deep-space font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
             >
               Join the Revolution
