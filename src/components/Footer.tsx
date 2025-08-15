@@ -39,9 +39,9 @@ const Footer = () => {
               <img src={logo} alt="NeuroNinjas Logo" className="w-12 h-12 rounded-lg" />
               <div>
                 <h3 className="text-2xl font-orbitron font-bold text-gradient">
-                  NeuroNinjas
+                  [TrAIn-N-Test]
                 </h3>
-                <p className="text-sm text-cyber-blue">AIML Club</p>
+                <p className="text-sm text-cyber-blue">The AIML Club</p>
               </div>
             </div>
             <p className="text-foreground/70 leading-relaxed mb-6 max-w-md">
@@ -109,7 +109,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-foreground/60 text-sm">
-                © 2025 NeuroNinjas AIML Club. All rights reserved.
+                © 2025 [TrAIn-N-Test] AIML Club. All rights reserved.
               </p>
               <p className="text-foreground/40 text-xs mt-1">
                 Built with 💙 for the future of AI

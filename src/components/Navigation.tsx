@@ -52,14 +52,14 @@ const Navigation = () => {
             >
               <img 
                 src={logo} 
-                alt="NeuroNinjas Logo" 
+                alt="TrAIn-N-Test Logo" 
                 className="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform duration-300"
               />
               <div className="hidden sm:block">
                 <h1 className="text-xl font-orbitron font-bold text-gradient">
-                  NeuroNinjas
+                  [TrAIn-N-Test]
                 </h1>
-                <p className="text-xs text-cyber-blue -mt-1">AIML Club</p>
+                <p className="text-xs text-cyber-blue -mt-1">The AIML Club</p>
               </div>
             </button>
 
@@ -100,14 +100,14 @@ const Navigation = () => {
           >
             <img 
               src={logo} 
-              alt="NeuroNinjas Logo" 
+              alt="TrAIn-N-Test Logo" 
               className="w-12 h-12 rounded-lg group-hover:scale-110 transition-transform duration-300"
             />
             <div>
               <h1 className="text-2xl font-orbitron font-bold text-gradient">
-                NeuroNinjas
+                [TrAIn-N-Test]
               </h1>
-              <p className="text-sm text-cyber-blue -mt-1">AIML Club</p>
+              <p className="text-sm text-cyber-blue -mt-1">The AIML Club</p>
             </div>
           </button>
 

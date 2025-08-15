@@ -28,7 +28,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
-            About NeuroNinjas
+            About us
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyber-blue to-neon-green mx-auto mb-8" />
         </div>
@@ -40,7 +40,7 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                NeuroNinjas is the premier Artificial Intelligence and Machine Learning club at Techno Bengal Institute of Technology Kolkata , 
+                [TrAIn-N-Test] is the premier Artificial Intelligence and Machine Learning club at Techno Bengal Institute of Technology Kolkata , 
                 dedicated to fostering innovation, learning, and collaboration in the rapidly evolving world of AI/ML.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
