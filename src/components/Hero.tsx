@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import heroBackground from '@/assets/bg pics/aimlbg.jpg';
+import heroBackground from '@/assets/bg pics/ai.jpg';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
