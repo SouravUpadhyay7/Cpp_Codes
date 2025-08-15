@@ -1,5 +1,5 @@
 import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/l.jpg';
 
 const Footer = () => {
   const quickLinks = [
