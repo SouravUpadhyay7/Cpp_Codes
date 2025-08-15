@@ -181,7 +181,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-electric-red mr-4" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-sm">Computer Science Department<br />Your College Campus</p>
+                      <p className="text-sm">AIML Department<br />Techno Bengal Institute of Technology Kolkata</p>
                     </div>
                   </div>
                 </div>

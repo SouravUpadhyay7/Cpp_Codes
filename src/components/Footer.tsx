@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start text-foreground/70">
                 <MapPin className="w-4 h-4 mr-3 text-electric-red mt-0.5" />
-                <span className="text-sm">Computer Science Dept.<br />Your College Campus</span>
+                <span className="text-sm">AIML Department<br />Techno Bengal Institute of Technology Kolkata</span>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-foreground/60 text-sm">
-                © 2024 NeuroNinjas AIML Club. All rights reserved.
+                © 2025 NeuroNinjas AIML Club. All rights reserved.
               </p>
               <p className="text-foreground/40 text-xs mt-1">
                 Built with 💙 for the future of AI
