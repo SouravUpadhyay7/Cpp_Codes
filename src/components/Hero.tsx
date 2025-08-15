@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import heroBackground from '@/assets/bg pics/vid.mp4';
+import heroBackground from '@/assets/bg pics/video.mp4';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
