@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/l.jpg';
+import logo from '@/assets/bg pics/synapse1.png';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,7 +57,7 @@ const Navigation = () => {
               />
               <div className="hidden sm:block">
                 <h1 className="text-xl font-orbitron font-bold text-gradient">
-                  [TrAIn-N-Test]
+                  Synapse
                 </h1>
                 <p className="text-xs text-cyber-blue -mt-1">The AIML Club</p>
               </div>
@@ -105,7 +105,7 @@ const Navigation = () => {
             />
             <div>
               <h1 className="text-2xl font-orbitron font-bold text-gradient">
-                [TrAIn-N-Test]
+                Synapse
               </h1>
               <p className="text-sm text-cyber-blue -mt-1">The AIML Club</p>
             </div>
