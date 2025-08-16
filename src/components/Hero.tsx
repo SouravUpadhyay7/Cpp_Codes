@@ -42,7 +42,7 @@ const Hero = () => {
             SYNAPSE
           </h1>
           <h2 className="text-3xl md:text-4xl font-jetbrains font-semibold text-gradient">
-           The AIML Club
+           The Official AIML Club of TBIT 
           </h2>
           <p className="text-xl md:text-2xl font-space text-foreground/90 max-w-2xl mx-auto leading-relaxed">
             Unleashing the Power of 
@@ -55,7 +55,7 @@ const Hero = () => {
               onClick={() => window.open('https://chat.whatsapp.com/DQA3MGg0RakFMx7s2yoJBJ', '_blank')}
               className="bg-cyber-blue hover:bg-cyber-blue/90 text-deep-space font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
             >
-              Join Our WhatsApp Community
+              Join Our Community
             </Button>
           </div>
         </div>
