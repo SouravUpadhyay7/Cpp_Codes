@@ -350,6 +350,19 @@
   51%, 100% { border-color: hsl(var(--cyber-blue)); }
 }
 
+@keyframes neural-pulse {
+  0% { opacity: 0; transform: scale(0.8); filter: blur(20px); }
+  30% { opacity: 0.3; transform: scale(1.1); filter: blur(10px); }
+  60% { opacity: 0.7; transform: scale(0.95); filter: blur(5px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+@keyframes neural-expand {
+  0% { width: 0; height: 0; opacity: 1; }
+  50% { width: 200px; height: 200px; opacity: 0.5; }
+  100% { width: 400px; height: 400px; opacity: 0; }
+}
+
 /* Utility Animations */
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -382,4 +395,23 @@
 
 .typing-text.show {
   animation: typing 3s steps(12) forwards, blink 1s infinite 3s;
+}
+
+.neural-pulse-text {
+  opacity: 0;
+  animation: neural-pulse 4s ease-in-out forwards;
+  position: relative;
+}
+
+.neural-pulse-text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 2px solid hsl(var(--cyber-blue));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: neural-expand 4s ease-out forwards;
 }

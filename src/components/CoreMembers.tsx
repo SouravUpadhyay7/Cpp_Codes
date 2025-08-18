@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import member1 from '@/assets/members pic/member-1.jpg';
-import member2 from '@/assets/members pic/member-2.jpg';
-import member3 from '@/assets/members pic/member-3.jpg';
+import member1 from '@/assets/members pic/person.jpg';
+import member2 from '@/assets/members pic/person.jpg';
+import member3 from '@/assets/members pic/person.jpg';
+
 
 
 const CoreMembers = () => {
@@ -10,26 +11,27 @@ const CoreMembers = () => {
 
   const members = [
     {
-      name: "Arjun Sharma",
-      role: "Club President",
+      name: "person1",
+      role: "Team Lead",
       image: member1,
       skills: ["Deep Learning", "Computer Vision", "Python"],
       description: "Leading the club with passion for AI research and innovation"
     },
     {
-      name: "Priya Patel",
-      role: "Vice President",
+      name: "person2",
+      role: "Social Media Lead",
       image: member2,
-      skills: ["NLP", "Data Science", "TensorFlow"],
-      description: "Driving technical excellence and mentoring new members"
+      skills: ["Python", "IoT", "APP Development"],
+      description: "Innovating with Python, IoT, and App Development."
     },
     {
-      name: "Rahul Kumar",
-      role: "Technical Lead",
+      name: "person3",
+      role: "Tech Lead",
       image: member3,
-      skills: ["MLOps", "Cloud AI", "PyTorch"],
-      description: "Architecting AI solutions and managing technical projects"
-    }
+      skills: ["Python", "Machine Learning", "NLP"],
+      description: "Building AI solutions with Python, ML, and NLP."
+    },
+
   ];
 
   useEffect(() => {

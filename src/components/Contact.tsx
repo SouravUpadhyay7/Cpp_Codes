@@ -165,7 +165,7 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-cyber-blue mr-4" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm">neuroninjas@college.edu</p>
+                      <p className="text-sm">synapse@college.edu</p>
                     </div>
                   </div>
                   
@@ -181,7 +181,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-electric-red mr-4" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-sm">AIML Department<br />Techno Bengal Institute of Technology Kolkata</p>
+                      <p className="text-sm">Tech Town, on Basanti Highway, No. 1 Govt. Colony, Kolkata-700150, West Bengal, India.</p>
                     </div>
                   </div>
                 </div>
