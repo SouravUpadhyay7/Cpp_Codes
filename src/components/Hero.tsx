@@ -38,7 +38,7 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="space-y-6">
-          <h1 className={`text-7xl md:text-8xl font-monospace font-bold neon-text ${isVisible ? 'neural-pulse-text' : 'neural-pulse-text'}`}>
+          <h1 className={`text-7xl md:text-8xl font-synapse font-black neon-text ${isVisible ? 'neural-pulse-text' : 'neural-pulse-text'}`}>
             SYNAPSE
           </h1>
           <h2 className="text-3xl md:text-4xl font-jetbrains font-semibold text-gradient">
@@ -52,9 +52,9 @@ const Hero = () => {
             <span className="neon-red-text font-semibold"> Machine Learning</span>
           </p>
           <div className="pt-8">
-            <Button 
+            <Button
               onClick={() => window.open('https://chat.whatsapp.com/DQA3MGg0RakFMx7s2yoJBJ', '_blank')}
-              className="bg-cyber-blue hover:bg-cyber-blue/90 text-deep-space font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
+              className="glass-button text-white font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
             >
               Join Our Community
             </Button>

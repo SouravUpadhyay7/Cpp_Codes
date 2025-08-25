@@ -54,8 +54,35 @@ const CoreMembers = () => {
   }, []);
 
   return (
-    <section id="members" ref={sectionRef} className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="members" ref={sectionRef} className="py-20 px-4 relative animated-bg">
+      {/* Neural Network Background */}
+      <div className="neural-network">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+            className="neural-node"
+            style={{
+              left: `${5 + (i * 10)}%`,
+              top: `${15 + Math.random() * 70}%`,
+              animationDelay: `${i * 0.3}s`
+            }}
+          />
+        ))}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`connection-${i}`}
+            className="neural-connection"
+            style={{
+              left: `${10 + (i * 12)}%`,
+              top: `${25 + Math.random() * 50}%`,
+              width: `${80 + Math.random() * 150}px`,
+              animationDelay: `${i * 0.8}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
             Core Team
@@ -73,7 +100,7 @@ const CoreMembers = () => {
               className={`fade-in-up ${isVisible ? 'animate' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="cyber-card p-6 rounded-2xl group hover:scale-105 transition-all duration-500 glow-hover">
+              <div className="glass-card-premium p-6 rounded-2xl group hover:scale-105 transition-all duration-500 glow-hover">
                 <div className="relative mb-6">
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-cyber-blue/30 group-hover:border-cyber-blue transition-all duration-300">
                     <img 

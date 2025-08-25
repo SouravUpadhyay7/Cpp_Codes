@@ -73,6 +73,10 @@ export default {
 			fontFamily: {
 				'jetbrains': ['JetBrains Mono', 'monospace'],
 				'space': ['Space Grotesk', 'sans-serif'],
+				'orbitron': ['Orbitron', 'monospace'],
+				'exo': ['Exo 2', 'sans-serif'],
+				'rajdhani': ['Rajdhani', 'sans-serif'],
+				'synapse': ['Exo 2', 'Orbitron', 'Rajdhani', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

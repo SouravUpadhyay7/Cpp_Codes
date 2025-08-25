@@ -27,20 +27,29 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.replace('#', ''));
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      const offsetTop = element.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
     setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
     setIsMobileMenuOpen(false);
   };
 
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-dark-matter/95 backdrop-blur-md border-b border-cyber-blue/20 shadow-lg' 
+        isScrolled
+          ? 'glass-nav'
           : 'bg-transparent'
       }`}>
         <div className="max-w-6xl mx-auto px-4">

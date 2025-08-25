@@ -70,8 +70,35 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <section id="events" ref={sectionRef} className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="events" ref={sectionRef} className="py-20 px-4 relative animated-bg">
+      {/* Neural Network Background */}
+      <div className="neural-network">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="neural-node"
+            style={{
+              left: `${8 + (i * 8)}%`,
+              top: `${10 + Math.random() * 80}%`,
+              animationDelay: `${i * 0.4}s`
+            }}
+          />
+        ))}
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={`connection-${i}`}
+            className="neural-connection"
+            style={{
+              left: `${5 + (i * 10)}%`,
+              top: `${20 + Math.random() * 60}%`,
+              width: `${60 + Math.random() * 120}px`,
+              animationDelay: `${i * 0.6}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
             Upcoming Events

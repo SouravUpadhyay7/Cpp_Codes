@@ -115,8 +115,23 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" ref={sectionRef} className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="achievements" ref={sectionRef} className="py-20 px-4 relative animated-bg">
+      {/* Floating Particles Background */}
+      <div className="floating-particles">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 25}s`,
+              animationDuration: `${15 + Math.random() * 15}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
             Our Achievements
@@ -135,7 +150,7 @@ const Achievements = () => {
               className={`scale-in ${isVisible ? 'animate' : ''} text-center`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="cyber-card p-6 rounded-2xl glow-hover group hover:scale-105 transition-all duration-500">
+              <div className="glass-card-premium p-6 rounded-2xl glow-hover group hover:scale-105 transition-all duration-500">
                 <div className="text-4xl mb-4 animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
                   {achievement.icon}
                 </div>
@@ -166,7 +181,7 @@ const Achievements = () => {
                 className={`fade-in-up ${isVisible ? 'animate' : ''}`}
                 style={{ animationDelay: `${(index + 4) * 0.2}s` }}
               >
-                <div className="cyber-card p-6 rounded-xl glow-green-hover group hover:scale-105 transition-all duration-300">
+                <div className="glass-tinted p-6 rounded-xl glow-green-hover group hover:scale-105 transition-all duration-300">
                   <div className="flex items-start space-x-4">
                     <div className="w-3 h-3 bg-neon-green rounded-full mt-2 animate-pulse" />
                     <div>

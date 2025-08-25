@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import { X } from 'lucide-react';
+import { X, Home, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import eventImage1 from '@/assets/event-gallery-1.jpg';
 
 const EventsGallery = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const sectionRef = useRef(null);
+  const { scrollToTop: smoothScrollToTop } = useSmoothScroll();
 
   const galleryImages = [
     {
@@ -69,6 +72,14 @@ const EventsGallery = () => {
     document.body.style.overflow = 'unset';
   };
 
+  const handleScrollToTop = () => {
+    smoothScrollToTop();
+  };
+
+  const openMorePics = () => {
+    window.open('https://photos.google.com/share/your-gallery-link', '_blank');
+  };
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -87,8 +98,50 @@ const EventsGallery = () => {
 
   return (
     <>
-      <section id="gallery" ref={sectionRef} className="py-20 px-4 relative">
-        <div className="max-w-6xl mx-auto">
+      <section id="gallery" ref={sectionRef} className="py-20 px-4 relative animated-bg">
+        {/* Floating Particles Background */}
+        <div className="floating-particles">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Neural Network Background */}
+        <div className="neural-network">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="neural-node"
+              style={{
+                left: `${10 + (i * 12)}%`,
+                top: `${20 + Math.random() * 60}%`,
+                animationDelay: `${i * 0.5}s`
+              }}
+            />
+          ))}
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={`connection-${i}`}
+              className="neural-connection"
+              style={{
+                left: `${15 + (i * 15)}%`,
+                top: `${30 + Math.random() * 40}%`,
+                width: `${100 + Math.random() * 200}px`,
+                animationDelay: `${i * 1}s`
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
               Events Gallery
@@ -107,7 +160,7 @@ const EventsGallery = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => openLightbox(image.src)}
               >
-                <div className="relative overflow-hidden rounded-xl cyber-border hover:shadow-lg transition-all duration-500 glow-red-hover">
+                <div className="relative overflow-hidden rounded-xl glass-card-subtle hover:shadow-lg transition-all duration-500 glow-red-hover">
                   <img 
                     src={image.src} 
                     alt={image.alt}
@@ -126,6 +179,25 @@ const EventsGallery = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mt-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ animationDelay: '0.8s' }}>
+            <Button
+              onClick={openMorePics}
+              className="glass-button text-white font-orbitron font-semibold text-lg px-8 py-4 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+            >
+              <ExternalLink className="w-5 h-5" />
+              View More Pictures
+            </Button>
+            <Button
+              onClick={handleScrollToTop}
+              variant="outline"
+              className="glass-button border-cyber-blue/30 text-cyber-blue hover:text-white font-orbitron font-semibold text-lg px-8 py-4 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+            >
+              <Home className="w-5 h-5" />
+              Back to Home
+            </Button>
           </div>
         </div>
       </section>

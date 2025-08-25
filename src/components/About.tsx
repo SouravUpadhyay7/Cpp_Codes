@@ -24,8 +24,23 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" ref={sectionRef} className="py-20 px-4 relative animated-bg">
+      {/* Floating Particles Background */}
+      <div className="floating-particles">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${20 + Math.random() * 10}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-5xl md:text-6xl font-orbitron font-bold neon-text mb-6">
             About us
@@ -35,7 +50,7 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className={`fade-in-left ${isVisible ? 'animate' : ''}`}>
-            <div className="cyber-card p-8 rounded-2xl">
+            <div className="glass-card-premium p-8 rounded-2xl">
               <h3 className="text-3xl font-orbitron font-semibold text-gradient mb-6">
                 Our Mission
               </h3>
@@ -52,7 +67,7 @@ const About = () => {
           
           <div className={`fade-in-right ${isVisible ? 'animate' : ''}`}>
             <div className="space-y-6">
-              <div className="cyber-card p-6 rounded-xl glow-hover">
+              <div className="glass-tinted p-6 rounded-xl glow-hover">
                 <h4 className="text-xl font-orbitron font-semibold neon-green-text mb-3">
                   🚀 Innovation Hub
                 </h4>
@@ -61,7 +76,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="cyber-card p-6 rounded-xl glow-hover">
+              <div className="glass-frosted p-6 rounded-xl glow-hover">
                 <h4 className="text-xl font-orbitron font-semibold neon-red-text mb-3">
                   🧠 Knowledge Sharing
                 </h4>
@@ -70,7 +85,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="cyber-card p-6 rounded-xl glow-hover">
+              <div className="glass-card-subtle p-6 rounded-xl glow-hover">
                 <h4 className="text-xl font-orbitron font-semibold text-cyber-blue mb-3">
                   🌟 Community Building
                 </h4>
