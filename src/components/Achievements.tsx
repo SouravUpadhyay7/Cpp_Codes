@@ -118,14 +118,14 @@ const Achievements = () => {
     <section id="achievements" ref={sectionRef} className="py-20 px-4 relative animated-bg">
       {/* Floating Particles Background */}
       <div className="floating-particles">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
             key={i}
             className="particle"
             style={{
               left: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 25}s`,
-              animationDuration: `${15 + Math.random() * 15}s`
+              animationDuration: `${20 + Math.random() * 10}s`
             }}
           />
         ))}

@@ -46,11 +46,13 @@ const Hero = () => {
             <span className="text-cyber-blue">Under the Department of CSE(AI&ML)</span>
           </h2>
           <p className="text-xl md:text-2xl font-space text-foreground/90 max-w-2xl mx-auto leading-relaxed">
-            Unleashing the Power of 
+            Unleashing the Power of
             <span className="neon-green-text font-semibold"> Artificial Intelligence </span>
-            & 
+            &
             <span className="neon-red-text font-semibold"> Machine Learning</span>
           </p>
+
+
           <div className="pt-8">
             <Button
               onClick={() => window.open('https://chat.whatsapp.com/DQA3MGg0RakFMx7s2yoJBJ', '_blank')}

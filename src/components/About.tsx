@@ -27,7 +27,7 @@ const About = () => {
     <section id="about" ref={sectionRef} className="py-20 px-4 relative animated-bg">
       {/* Floating Particles Background */}
       <div className="floating-particles">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(6)].map((_, i) => (
           <div
             key={i}
             className="particle"

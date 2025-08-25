@@ -57,26 +57,26 @@ const CoreMembers = () => {
     <section id="members" ref={sectionRef} className="py-20 px-4 relative animated-bg">
       {/* Neural Network Background */}
       <div className="neural-network">
-        {[...Array(10)].map((_, i) => (
+        {[...Array(5)].map((_, i) => (
           <div
             key={i}
             className="neural-node"
             style={{
-              left: `${5 + (i * 10)}%`,
-              top: `${15 + Math.random() * 70}%`,
-              animationDelay: `${i * 0.3}s`
+              left: `${10 + (i * 20)}%`,
+              top: `${20 + Math.random() * 60}%`,
+              animationDelay: `${i * 0.5}s`
             }}
           />
         ))}
-        {[...Array(8)].map((_, i) => (
+        {[...Array(4)].map((_, i) => (
           <div
             key={`connection-${i}`}
             className="neural-connection"
             style={{
-              left: `${10 + (i * 12)}%`,
-              top: `${25 + Math.random() * 50}%`,
-              width: `${80 + Math.random() * 150}px`,
-              animationDelay: `${i * 0.8}s`
+              left: `${15 + (i * 20)}%`,
+              top: `${30 + Math.random() * 40}%`,
+              width: `${100 + Math.random() * 100}px`,
+              animationDelay: `${i * 1}s`
             }}
           />
         ))}
