@@ -1,49 +1,79 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Users } from 'lucide-react';
+import { Calendar, Clock, Users, MapPin, User } from 'lucide-react';
 import deepLearningImg from '@/assets/event-deep-learning.jpg';
 import aiEthicsImg from '@/assets/event-ai-ethics.jpg';
 import computerVisionImg from '@/assets/event-computer-vision.jpg';
 
+interface Event {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  teacher: string;
+  location: string;
+  createdAt: string;
+}
+
 const UpcomingEvents = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [adminEvents, setAdminEvents] = useState<Event[]>([]);
   const sectionRef = useRef(null);
 
-  const events = [
+  // Static fallback events (shown when no admin events exist)
+  const staticEvents = [
     {
-      id: 1,
+      id: "static-1",
       title: "Deep Learning Workshop",
       description: "Hands-on workshop covering neural networks, backpropagation, and building your first deep learning model with TensorFlow.",
-      date: "March 15, 2024",
-      time: "2:00 PM - 5:00 PM",
+      date: "2024-03-15",
+      time: "14:00",
+      teacher: "Dr. Sarah Johnson",
+      location: "Lab 101",
       attendees: "50+ Expected",
       level: "Beginner to Intermediate",
       slug: "deep-learning-workshop",
       image: deepLearningImg
     },
     {
-      id: 2,
+      id: "static-2",
       title: "AI Ethics Symposium",
       description: "Discussing the ethical implications of AI, bias in machine learning, and responsible AI development practices.",
-      date: "March 22, 2024", 
-      time: "10:00 AM - 4:00 PM",
+      date: "2024-03-22",
+      time: "10:00",
+      teacher: "Prof. Michael Chen",
+      location: "Auditorium",
       attendees: "100+ Expected",
       level: "All Levels",
       slug: "ai-ethics-symposium",
       image: aiEthicsImg
     },
     {
-      id: 3,
+      id: "static-3",
       title: "Computer Vision Hackathon",
       description: "24-hour hackathon focused on computer vision applications. Build innovative solutions using OpenCV, YOLO, and modern CV techniques.",
-      date: "April 5-6, 2024",
-      time: "9:00 AM - 9:00 AM",
+      date: "2024-04-05",
+      time: "09:00",
+      teacher: "Dr. Emily Rodriguez",
+      location: "Computer Lab",
       attendees: "75+ Teams",
       level: "Intermediate to Advanced",
       slug: "computer-vision-hackathon",
       image: computerVisionImg
     }
   ];
+
+  // Load admin events from localStorage
+  useEffect(() => {
+    const savedEvents = localStorage.getItem('tbit_events');
+    if (savedEvents) {
+      setAdminEvents(JSON.parse(savedEvents));
+    }
+  }, []);
+
+  // Combine admin events with static events (admin events take priority)
+  const allEvents = adminEvents.length > 0 ? adminEvents : staticEvents;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -110,7 +140,7 @@ const UpcomingEvents = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {events.map((event, index) => (
+          {allEvents.map((event, index) => (
             <div 
               key={event.id}
               className={`scale-in ${isVisible ? 'animate' : ''}`}
@@ -118,49 +148,73 @@ const UpcomingEvents = () => {
             >
               <div className="cyber-card p-6 rounded-2xl h-full flex flex-col group glow-green-hover hover:scale-105 transition-all duration-500">
                 <div className="flex-1">
-                  <div className="relative mb-4 rounded-lg overflow-hidden">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute top-2 left-2">
-                      <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium backdrop-blur-sm">
-                        {event.level}
-                      </span>
+                  {/* Show image only for static events */}
+                  {event.image && (
+                    <div className="relative mb-4 rounded-lg overflow-hidden">
+                      <img
+                        src={event.image}
+                        alt={event.title}
+                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute top-2 left-2">
+                        <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium backdrop-blur-sm">
+                          {event.level || 'All Levels'}
+                        </span>
+                      </div>
+                      <div className="absolute top-2 right-2 w-8 h-8 bg-electric-red/20 rounded-full animate-pulse backdrop-blur-sm" />
                     </div>
-                    <div className="absolute top-2 right-2 w-8 h-8 bg-electric-red/20 rounded-full animate-pulse backdrop-blur-sm" />
-                  </div>
-                  
+                  )}
+
                   <h3 className="text-2xl font-orbitron font-bold text-gradient mb-3">
                     {event.title}
                   </h3>
-                  
+
                   <p className="text-foreground/80 mb-6 leading-relaxed">
                     {event.description}
                   </p>
-                  
+
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center text-cyber-blue">
                       <Calendar className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{event.date}</span>
+                      <span className="text-sm">
+                        {event.date.includes('-') ? new Date(event.date).toLocaleDateString() : event.date}
+                      </span>
                     </div>
                     <div className="flex items-center text-neon-green">
                       <Clock className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{event.time}</span>
+                      <span className="text-sm">
+                        {event.time.includes(':') && event.time.length === 5
+                          ? new Date(`2000-01-01T${event.time}`).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                          : event.time
+                        }
+                      </span>
                     </div>
-                    <div className="flex items-center text-electric-red">
-                      <Users className="w-4 h-4 mr-2" />
-                      <span className="text-sm">{event.attendees}</span>
-                    </div>
+                    {event.teacher && (
+                      <div className="flex items-center text-cosmic-purple">
+                        <User className="w-4 h-4 mr-2" />
+                        <span className="text-sm">{event.teacher}</span>
+                      </div>
+                    )}
+                    {event.location && (
+                      <div className="flex items-center text-electric-red">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span className="text-sm">{event.location}</span>
+                      </div>
+                    )}
+                    {event.attendees && (
+                      <div className="flex items-center text-electric-red">
+                        <Users className="w-4 h-4 mr-2" />
+                        <span className="text-sm">{event.attendees}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
                 
-                <Button 
-                  onClick={() => handleExploreEvent(event.slug)}
+                <Button
+                  onClick={() => event.slug ? handleExploreEvent(event.slug) : alert('Event details coming soon!')}
                   className="w-full bg-transparent border-2 border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-deep-space font-orbitron font-semibold transition-all duration-300 group-hover:border-neon-green group-hover:text-neon-green"
                 >
-                  Explore Event
+                  {event.slug ? 'Explore Event' : 'View Details'}
                 </Button>
               </div>
             </div>

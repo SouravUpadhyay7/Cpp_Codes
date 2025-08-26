@@ -15,6 +15,11 @@ dist-ssr
 # Video files
 *.mp4
 
+# Environment variables (contains sensitive data)
+.env
+.env.local
+.env.production
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
