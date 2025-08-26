@@ -1,74 +1,65 @@
-# Welcome to your Lovable project
+# � SYNAPSE - Official TBIT Kolkata AIML Club Website
 
-## Project info
+<div align="center">
 
-**URL**: https://lovable.dev/projects/04211c56-c050-4982-bd54-fe76b98b8b22
+![SYNAPSE Logo](https://img.shields.io/badge/SYNAPSE-OFFICIAL%20TBIT%20KOLKATA%20AIML-00D4FF?style=for-the-badge&logo=brain&logoColor=white)
+![Copyright](https://img.shields.io/badge/©%202025-TBIT%20Kolkata%20AIML%20Club-FF6B6B?style=for-the-badge&logo=copyright)
+![Protected](https://img.shields.io/badge/PROTECTED-All%20Rights%20Reserved-FF0000?style=for-the-badge&logo=shield-check)
 
-## How can I edit this code?
+**🏛️ OFFICIAL WEBSITE - Techno Bengal Institute of Technology, Kolkata**  
+**🧠 Artificial Intelligence & Machine Learning Club**
 
-There are several ways of editing your application.
+[![Live Demo](https://img.shields.io/badge/Official%20Site-Visit%20Now-00FF88?style=for-the-badge&logo=vercel)](https://aiml-club-nhyeq0lsu-sourav-upadhyays-projects.vercel.app)
+[![Admin Panel](https://img.shields.io/badge/Admin%20Access-Authorized%20Only-FF6B6B?style=for-the-badge&logo=shield)](https://aiml-club-nhyeq0lsu-sourav-upadhyays-projects.vercel.app/tbitadminlogin)
 
-**Use Lovable**
+</div>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/04211c56-c050-4982-bd54-fe76b98b8b22) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚠️ **COPYRIGHT NOTICE & LEGAL WARNING**
 
-**Use your preferred IDE**
+### 🚨 **STRICTLY PROHIBITED - NO COPYING ALLOWED**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**THIS IS THE OFFICIAL WEBSITE OF TBIT KOLKATA AIML CLUB**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **© 2025 Techno Bengal Institute of Technology, Kolkata - AIML Club**
+- **ALL RIGHTS RESERVED - UNAUTHORIZED COPYING IS STRICTLY PROHIBITED**
+- **This website, its design, code, content, and all associated materials are the exclusive property of TBIT Kolkata AIML Club**
+- **Any unauthorized reproduction, distribution, or use is strictly forbidden and may result in legal action**
 
-Follow these steps:
+### 📜 **INTELLECTUAL PROPERTY RIGHTS**
+- **Trademark:** SYNAPSE™ is an official trademark of TBIT Kolkata AIML Club
+- **Copyright:** All source code, designs, and content are protected under copyright law
+- **Proprietary Technology:** Custom-built for TBIT Kolkata AIML Club exclusively
+- **Legal Protection:** Violations will be prosecuted to the full extent of the law
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🛡️ **AUTHORIZED USE ONLY**
+- **Official TBIT Kolkata AIML Club members and authorized personnel only**
+- **No commercial use, reproduction, or distribution permitted**
+- **Educational use requires explicit written permission**
+- **Contact: [official-email@tbitkolkata.edu] for licensing inquiries**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🏛️ **OFFICIAL TBIT KOLKATA AIML CLUB WEBSITE FEATURES**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+(🔗 [Features remain same as your original README]…)
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📄 License
 
-**Use GitHub Codespaces**
+**© 2025 Techno Bengal Institute of Technology, Kolkata - AIML Club**  
+**All Rights Reserved. Unauthorized use, copying, modification, or distribution of this code is strictly prohibited.**  
+For inquiries, contact: **official-email@tbitkolkata.edu**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+<div align="center">
 
-This project is built with:
+**Built with ❤️ by TBIT Kolkata AIML Club**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+[![GitHub Stars](https://img.shields.io/github/stars/your-username/AIML-Club?style=social)](https://github.com/your-username/AIML-Club)  
+[![Follow](https://img.shields.io/github/followers/your-username?style=social)](https://github.com/your-username)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/04211c56-c050-4982-bd54-fe76b98b8b22) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-# AIML-Club
+</div>

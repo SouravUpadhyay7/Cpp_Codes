@@ -23,6 +23,11 @@ const AdminLogin = () => {
     password: import.meta.env.VITE_ADMIN_PASSWORD
   };
 
+  // Validate environment variables are loaded
+  if (!ADMIN_CREDENTIALS.username || !ADMIN_CREDENTIALS.password) {
+    console.error('Environment variables not loaded. Please check your .env file or Vercel environment variables.');
+  }
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setCredentials(prev => ({
