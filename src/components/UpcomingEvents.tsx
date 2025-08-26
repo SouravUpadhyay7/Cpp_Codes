@@ -13,6 +13,7 @@ interface Event {
   time: string;
   teacher: string;
   location: string;
+  image?: string; // Base64 encoded image or URL
   createdAt: string;
 }
 
@@ -140,7 +141,7 @@ const UpcomingEvents = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {allEvents.map((event, index) => (
+          {allEvents.map((event: any, index: number) => (
             <div 
               key={event.id}
               className={`scale-in ${isVisible ? 'animate' : ''}`}
@@ -148,7 +149,7 @@ const UpcomingEvents = () => {
             >
               <div className="cyber-card p-6 rounded-2xl h-full flex flex-col group glow-green-hover hover:scale-105 transition-all duration-500">
                 <div className="flex-1">
-                  {/* Show image only for static events */}
+                  {/* Show admin uploaded image or static event image */}
                   {event.image && (
                     <div className="relative mb-4 rounded-lg overflow-hidden">
                       <img
@@ -156,11 +157,14 @@ const UpcomingEvents = () => {
                         alt={event.title}
                         className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute top-2 left-2">
-                        <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium backdrop-blur-sm">
-                          {event.level || 'All Levels'}
-                        </span>
-                      </div>
+                      {/* Show level badge only for static events */}
+                      {event.level && (
+                        <div className="absolute top-2 left-2">
+                          <span className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-sm font-medium backdrop-blur-sm">
+                            {event.level}
+                          </span>
+                        </div>
+                      )}
                       <div className="absolute top-2 right-2 w-8 h-8 bg-electric-red/20 rounded-full animate-pulse backdrop-blur-sm" />
                     </div>
                   )}

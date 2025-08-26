@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Plus, Edit, Trash2, LogOut, Calendar, Clock, User, FileText } from 'lucide-react';
+import { Plus, Edit, Trash2, LogOut, Calendar, Clock, User, FileText, Upload, Image } from 'lucide-react';
 
 interface Event {
   id: string;
@@ -16,6 +16,7 @@ interface Event {
   time: string;
   teacher: string;
   location: string;
+  image?: string; // Base64 encoded image or URL
   createdAt: string;
 }
 
@@ -32,8 +33,10 @@ const AdminDashboard = () => {
     date: '',
     time: '',
     teacher: '',
-    location: ''
+    location: '',
+    image: ''
   });
+  const [imagePreview, setImagePreview] = useState<string>('');
 
   // Check admin authentication
   useEffect(() => {
@@ -62,6 +65,42 @@ const AdminDashboard = () => {
     }));
   };
 
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Check file size (max 5MB)
+      if (file.size > 5 * 1024 * 1024) {
+        setMessage({ type: 'error', text: 'Image size should be less than 5MB' });
+        return;
+      }
+
+      // Check file type
+      if (!file.type.startsWith('image/')) {
+        setMessage({ type: 'error', text: 'Please select a valid image file' });
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const base64String = event.target?.result as string;
+        setEventForm(prev => ({
+          ...prev,
+          image: base64String
+        }));
+        setImagePreview(base64String);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setEventForm(prev => ({
+      ...prev,
+      image: ''
+    }));
+    setImagePreview('');
+  };
+
   const resetForm = () => {
     setEventForm({
       title: '',
@@ -69,8 +108,10 @@ const AdminDashboard = () => {
       date: '',
       time: '',
       teacher: '',
-      location: ''
+      location: '',
+      image: ''
     });
+    setImagePreview('');
     setIsAddingEvent(false);
     setEditingEvent(null);
   };
@@ -101,8 +142,10 @@ const AdminDashboard = () => {
       date: event.date,
       time: event.time,
       teacher: event.teacher,
-      location: event.location
+      location: event.location,
+      image: event.image || ''
     });
+    setImagePreview(event.image || '');
     setIsAddingEvent(true);
   };
 
@@ -257,6 +300,55 @@ const AdminDashboard = () => {
                   />
                 </div>
 
+                {/* Image Upload Section */}
+                <div className="space-y-2">
+                  <Label htmlFor="image">Event Banner Image (Optional)</Label>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <Input
+                        id="image"
+                        name="image"
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                        className="glass-button file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyber-blue file:text-white hover:file:bg-cyber-blue/80"
+                      />
+                      <div className="flex items-center text-sm text-foreground/60">
+                        <Upload className="w-4 h-4 mr-1" />
+                        Max 5MB
+                      </div>
+                    </div>
+
+                    {/* Image Preview */}
+                    {imagePreview && (
+                      <div className="relative">
+                        <div className="glass-card-subtle p-4 rounded-lg">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center text-sm text-neon-green">
+                              <Image className="w-4 h-4 mr-1" />
+                              Image Preview
+                            </div>
+                            <Button
+                              type="button"
+                              onClick={removeImage}
+                              size="sm"
+                              variant="outline"
+                              className="glass-button border-electric-red/30 text-electric-red hover:bg-electric-red/10"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          </div>
+                          <img
+                            src={imagePreview}
+                            alt="Event banner preview"
+                            className="w-full h-48 object-cover rounded-lg border border-cyber-blue/30"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="date">Date *</Label>
@@ -339,8 +431,19 @@ const AdminDashboard = () => {
               {events.map((event) => (
                 <Card key={event.id} className="glass-card-premium">
                   <CardContent className="p-6">
+                    {/* Event Image */}
+                    {event.image && (
+                      <div className="mb-4">
+                        <img
+                          src={event.image}
+                          alt={event.title}
+                          className="w-full h-48 object-cover rounded-lg border border-cyber-blue/30"
+                        />
+                      </div>
+                    )}
+
                     <div className="flex justify-between items-start mb-4">
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-xl font-orbitron font-bold text-gradient mb-2">
                           {event.title}
                         </h3>
@@ -359,12 +462,13 @@ const AdminDashboard = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex space-x-2">
+                      <div className="flex space-x-2 ml-4">
                         <Button
                           onClick={() => handleEditEvent(event)}
                           size="sm"
                           variant="outline"
-                          className="glass-button border-cyber-blue/30 text-cyber-blue"
+                          className="glass-button border-cyber-blue/30 text-cyber-blue hover:bg-cyber-blue/10"
+                          title="Edit Event"
                         >
                           <Edit className="w-4 h-4" />
                         </Button>
@@ -372,15 +476,16 @@ const AdminDashboard = () => {
                           onClick={() => handleDeleteEvent(event.id)}
                           size="sm"
                           variant="outline"
-                          className="glass-button border-electric-red/30 text-electric-red"
+                          className="glass-button border-electric-red/30 text-electric-red hover:bg-electric-red/10"
+                          title="Delete Event"
                         >
                           <Trash2 className="w-4 h-4" />
                         </Button>
                       </div>
                     </div>
-                    
-                    <p className="text-foreground/80 mb-3">{event.description}</p>
-                    
+
+                    <p className="text-foreground/80 mb-3 leading-relaxed">{event.description}</p>
+
                     <div className="text-sm text-foreground/60">
                       <strong>Location:</strong> {event.location}
                     </div>

@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start text-foreground/70">
                 <MapPin className="w-4 h-4 mr-3 text-electric-red mt-0.5" />
-                <span className="text-sm">AIML Department<br />Techno Bengal Institute of Technology Kolkata</span>
+                <span className="text-sm">CSE (Artificial Intelligence and Machine Learning) Department<br />Techno Bengal Institute of Technology Kolkata</span>
               </div>
             </div>
           </div>

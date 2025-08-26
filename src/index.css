@@ -225,21 +225,114 @@
     font-family: 'Rajdhani', sans-serif;
   }
 
-  /* Special SYNAPSE font styling */
+  /* Special SYNAPSE font styling - Astrolab Style */
   .font-synapse {
-    font-family: 'Exo 2', 'Orbitron', 'Rajdhani', sans-serif;
+    font-family: 'Orbitron', 'Arial Black', 'Impact', sans-serif;
     font-weight: 900;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    font-stretch: expanded;
+    font-stretch: condensed;
+    /* Astrolab-style geometric appearance */
+    line-height: 0.8;
+    font-variant: small-caps;
     color: white;
+    /* Enhanced geometric text shadow */
     text-shadow:
-      0 0 10px hsl(var(--cyber-blue) / 0.8),
-      0 0 20px hsl(var(--cyber-blue) / 0.6),
-      0 0 40px hsl(var(--cyber-blue) / 0.4),
-      0 0 80px hsl(var(--cyber-blue) / 0.2),
-      2px 2px 0px hsl(var(--neon-green) / 0.3),
-      4px 4px 0px hsl(var(--electric-red) / 0.2);
+      0 0 5px rgba(0, 212, 255, 0.6),
+      0 0 10px rgba(0, 212, 255, 0.4),
+      0 0 15px rgba(0, 212, 255, 0.3),
+      0 0 20px rgba(0, 212, 255, 0.2),
+      2px 2px 0px rgba(0, 255, 136, 0.3),
+      4px 4px 0px rgba(255, 107, 107, 0.2),
+      /* Additional geometric shadows for depth */
+      -1px -1px 0px rgba(255, 255, 255, 0.1),
+      1px 1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Astrolab-style neon gradient effect for SYNAPSE */
+  .astrolab-neon {
+    background: linear-gradient(
+      45deg,
+      #00D4FF 0%,
+      #FFFFFF 15%,
+      #00FF88 30%,
+      #FFFFFF 45%,
+      #FF6B6B 60%,
+      #FFFFFF 75%,
+      #8B5CF6 90%,
+      #00D4FF 100%
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: astrolab-glow 5s ease-in-out infinite;
+  }
+
+  @keyframes astrolab-glow {
+    0% {
+      background-position: 0% 50%;
+      filter: brightness(1.2) contrast(1.3);
+    }
+    25% {
+      background-position: 100% 0%;
+      filter: brightness(1.5) contrast(1.5);
+    }
+    50% {
+      background-position: 100% 100%;
+      filter: brightness(1.3) contrast(1.4);
+    }
+    75% {
+      background-position: 0% 100%;
+      filter: brightness(1.4) contrast(1.3);
+    }
+    100% {
+      background-position: 0% 50%;
+      filter: brightness(1.2) contrast(1.3);
+    }
+  }
+
+  /* Geometric scanning effect for Astrolab style */
+  .astrolab-geometric {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .astrolab-geometric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 212, 255, 0.4) 20%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(0, 255, 136, 0.4) 80%,
+      transparent 100%
+    );
+    animation: astrolab-scan 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes astrolab-scan {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
   }
 }
 
