@@ -38,14 +38,14 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="space-y-6">
-          <h1 className={`text-5xl md:text-7xl font-synapse font-black astrolab astrolab-geometric ${isVisible ? 'neural-pulse-text' : 'neural-pulse-text'}`}>
+          <h1 className={`text-10xl md:text-7xl font-synapse font-black astrolab astrolab-geometric ${isVisible ? 'neural-pulse-text' : 'neural-pulse-text'}`}>
             SYNAPSE
           </h1>
           <h2 className="text-2xl md:text-3xl font-jetbrains font-bold text-gradient leading-tight">
            The Official AIML Club of TBIT
           </h2>
           <p className="text-base md:text-2xl font-space text-cyber-blue font-medium tracking-wide">
-            Under the Department of CSE(AI&ML)
+            Under the Department of CSE( AI & ML )
           </p>
           <p className="text-xl md:text-2xl font-space text-foreground/90 max-w-2xl mx-auto leading-relaxed">
             Unleashing the Power of

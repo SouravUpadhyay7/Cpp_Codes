@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: 'Team', href: '#members' },
     { name: 'Events', href: '#events' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Achievements', href: '#achievements' },
+    // { name: 'Achievements', href: '#achievements' },
     { name: 'Contact', href: '#contact' }
   ];
 

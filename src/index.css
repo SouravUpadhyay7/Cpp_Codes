@@ -236,7 +236,7 @@
     line-height: 0.8;
     font-variant: small-caps;
     color: white;
-    /* Enhanced geometric text shadow */
+    /* Enhanced geometric text shadow - No black background */
     text-shadow:
       0 0 5px rgba(0, 212, 255, 0.6),
       0 0 10px rgba(0, 212, 255, 0.4),
@@ -244,12 +244,29 @@
       0 0 20px rgba(0, 212, 255, 0.2),
       2px 2px 0px rgba(0, 255, 136, 0.3),
       4px 4px 0px rgba(255, 107, 107, 0.2),
-      /* Additional geometric shadows for depth */
-      -1px -1px 0px rgba(255, 255, 255, 0.1),
-      1px 1px 0px rgba(0, 0, 0, 0.3);
+      /* Additional geometric shadows for depth - removed black shadow */
+      -1px -1px 0px rgba(255, 255, 255, 0.1);
   }
 
-  /* Astrolab-style neon gradient effect for SYNAPSE */
+  /* Clean Astrolab-style effect with more white color */
+  .astrolab {
+    color: #FFFFFF;
+    animation: astrolab-color-cycle 8s ease-in-out infinite;
+  }
+
+  @keyframes astrolab-color-cycle {
+    0% { color: #FFFFFF; filter: brightness(1.5); }
+    12% { color: #00D4FF; filter: brightness(1.3); }
+    25% { color: #FFFFFF; filter: brightness(1.6); }
+    37% { color: #00FF88; filter: brightness(1.4); }
+    50% { color: #FFFFFF; filter: brightness(1.5); }
+    62% { color: #FF6B6B; filter: brightness(1.3); }
+    75% { color: #FFFFFF; filter: brightness(1.6); }
+    87% { color: #8B5CF6; filter: brightness(1.4); }
+    100% { color: #FFFFFF; filter: brightness(1.5); }
+  }
+
+  /* Astrolab-style neon gradient effect for SYNAPSE (alternative) */
   .astrolab-neon {
     background: linear-gradient(
       45deg,

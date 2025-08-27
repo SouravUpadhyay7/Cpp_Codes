@@ -5,7 +5,7 @@ import About from '@/components/About';
 import CoreMembers from '@/components/CoreMembers';
 import UpcomingEvents from '@/components/UpcomingEvents';
 import EventsGallery from '@/components/EventsGallery';
-import Achievements from '@/components/Achievements';
+// import Achievements from '@/components/Achievements';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
@@ -61,7 +61,7 @@ const Index = () => {
           </section>
 
           <EventsGallery />
-          <Achievements />
+          {/* <Achievements /> */}
           <Contact />
         </main>
         <Footer />
