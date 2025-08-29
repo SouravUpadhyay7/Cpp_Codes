@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Linkedin } from 'lucide-react';
 import member1 from '@/assets/members pic/Abhinav.jpeg';
 
-import member2 from '@/assets/members pic/person.jpg';
+import member2 from '@/assets/members pic/sourav.png';
 import member3 from '@/assets/members pic/yash.png';
 
 
