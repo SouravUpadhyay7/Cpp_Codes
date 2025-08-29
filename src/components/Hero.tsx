@@ -57,7 +57,7 @@ const Hero = () => {
 
           <div className="pt-8">
             <Button
-              onClick={() => window.open('https://chat.whatsapp.com/DQA3MGg0RakFMx7s2yoJBJ', '_blank')}
+              onClick={() => window.open('#', '_blank')}
               className="glass-button text-white font-jetbrains font-semibold text-lg px-8 py-6 rounded-xl glow-hover transition-all duration-300 transform hover:scale-105"
             >
               Join Our Community
