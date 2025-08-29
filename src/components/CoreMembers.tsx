@@ -5,7 +5,7 @@ import member1 from '@/assets/members pic/Abhinav.jpeg';
 import member2 from '@/assets/members pic/person.jpg';
 import member3 from '@/assets/members pic/yash.png';
 
-import hodImage from '@/assets/members pic/HOD.jpg'; // Add HOD image
+
 
 
 
@@ -13,8 +13,8 @@ const CoreMembers = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-// HOD - Separate from regular members for center positioning
-const hod = {
+// HOD moved to AcademicGuide section
+/*const hod = {
   name: "Dr. Jyoti Sekhar Banerjee",
   role: "Head of Department",
   image: hodImage,
@@ -22,7 +22,7 @@ const hod = {
   description: "Dr. Jyoti Sekhar Banerjee, Ph.D. (Engg.), serves as the Head of the CSE (AI & ML) Department at Bengal Institute of Technology, Kolkata. With nearly two decades of teaching, research, and academic leadership, he has published over 70 research papers in reputed international journals, conferences, and book chapters. A former Post-Doctoral Fellow at Nottingham Trent University (UK), he also leads the institute’s R&D and IPR initiatives. Actively involved in professional bodies like ISTE, CSI, and IETE, Dr. Banerjee continues to guide the department with vision, innovation, and excellence.",
   linkedin: "https://www.linkedin.com/in/dr-jyoti-sekhar-banerjee-6b052718b/",
   isHOD: true
-};
+};*/
 
 
   const members = [
@@ -30,7 +30,7 @@ const hod = {
       name: "Abhinav",
       role: "Club Lead",
       image: member1,
-      skills: ["Deep Learning", "Computer Vision", "Python"],
+      skills: ["IoT", "Computer Vision", "Python"],
       description: "Leading the club with passion for AI research and innovation",
       year: "3rd Year",
       linkedin: "https://www.linkedin.com/in/abhinavbit/" // Add actual LinkedIn URL
@@ -117,58 +117,7 @@ const hod = {
           </p>
         </div>
         
-        {/* HOD Card - Centered */}
-        <div className="flex justify-center mb-12">
-          <div className={`fade-in-up ${isVisible ? 'animate' : ''} max-w-md`}>
-            <div className="glass-card-premium p-8 rounded-2xl group hover:scale-105 transition-all duration-500 glow-hover border-2 border-neon-green/30">
-              <div className="relative mb-6">
-                <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-neon-green/50 group-hover:border-neon-green transition-all duration-300">
-                  <img
-                    src={hod.image}
-                    alt={hod.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-neon-green rounded-full opacity-90 animate-pulse" />
-                {/* LinkedIn Icon for HOD */}
-                <a
-                  href={hod.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute top-2 right-2 w-10 h-10 bg-cyber-blue/20 hover:bg-cyber-blue/40 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                >
-                  <Linkedin className="w-5 h-5 text-cyber-blue" />
-                </a>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-2xl font-orbitron font-bold text-gradient mb-2">
-                  {hod.name}
-                </h3>
-                <p className="text-lg neon-green-text font-semibold mb-1">
-                  {hod.role}
-                </p>
-                <p className="text-sm text-cyber-blue font-medium mb-4">
-                  CSE( AI & ML ) Department
-                </p>
-                <p className="text-sm text-foreground/70 mb-4 leading-relaxed">
-                  {hod.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {hod.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-neon-green/20 text-neon-green border border-neon-green/30 rounded-full text-xs font-medium"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* HOD moved to AcademicGuide section */}
 
         {/* Core Members Grid */}
         <div className="grid md:grid-cols-3 gap-8">
