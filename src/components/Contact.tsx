@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Github, Linkedin, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import twitterLogo from '@/assets/Twitter.png';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -59,9 +60,9 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: '#', color: 'text-cyber-blue' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'text-neon-green' },
-    { icon: X, label: 'X', href: '#', color: 'text-electric-red' }
+    { icon: Github, label: 'GitHub', href: '#', color: 'text-cyber-blue', type: 'icon' },
+    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'text-neon-green', type: 'icon' },
+    { icon: twitterLogo, label: 'Twitter', href: '#', color: 'text-foreground', type: 'image' }
   ];
 
   return (
@@ -215,7 +216,11 @@ const Contact = () => {
                       className={`${social.color} hover:scale-125 transition-all duration-300 glow-hover p-3 rounded-full border border-current/20`}
                       title={social.label}
                     >
-                      <social.icon className="w-6 h-6" />
+                      {social.type === 'image' ? (
+                        <img src={social.icon} alt={social.label} className="w-10 h-10" />
+                      ) : (
+                        <social.icon className="w-6 h-6" />
+                      )}
                     </a>
                   ))}
                 </div>
