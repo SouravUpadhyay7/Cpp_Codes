@@ -11,7 +11,7 @@ const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => void })
     "Connecting to Synapse Core...",
     "Calibrating Machine Learning Algorithms...",
     "Establishing Neural Pathways...",
-    "Synapse Ready!"
+    "PredAIction Ready!"
   ];
 
   useEffect(() => {
