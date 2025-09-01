@@ -38,9 +38,10 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="space-y-6">
-          <h1 className={`text-5xl md:text-7xl font-synapse font-black astrolab astrolab-geometric ${isVisible ? 'neural-pulse-text' : 'neural-pulse-text'}`}>
-            SYNAPSE
-          </h1>
+          <h1 className="text-[clamp(1.75rem,6vw,4rem)] font-synapse font-black astrolab astrolab-geometric">
+  PredAIction
+</h1>
+
           <h2 className="text-2xl md:text-3xl font-jetbrains font-bold text-gradient leading-tight">
            The Official AIML Club of TBIT
           </h2>

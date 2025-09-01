@@ -55,7 +55,7 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                Synapse is the premier Artificial Intelligence and Machine Learning club at Techno Bengal Institute of Technology Kolkata , 
+                PredAIction is the premier Artificial Intelligence and Machine Learning club at Techno Bengal Institute of Technology Kolkata , 
                 dedicated to fostering innovation, learning, and collaboration in the rapidly evolving world of AI/ML.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">

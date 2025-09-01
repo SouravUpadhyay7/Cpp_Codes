@@ -67,7 +67,7 @@ const Navigation = () => {
               />
               <div className="hidden sm:block">
                 <h1 className="text-xl font-orbitron font-bold text-gradient">
-                  Synapse
+                  PredAIction
                 </h1>
                 <p className="text-xs text-cyber-blue -mt-1">TBIT AIML Club</p>
               </div>
@@ -115,7 +115,7 @@ const Navigation = () => {
             />
             <div>
               <h1 className="text-2xl font-orbitron font-bold text-gradient">
-                Synapse
+                PredAIction
               </h1>
               <p className="text-sm text-cyber-blue -mt-1">TBIT AIML Club</p>
             </div>

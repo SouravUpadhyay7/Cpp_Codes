@@ -14,7 +14,7 @@ const AcademicGuide = () => {
     skills: ["AI Research", "Machine Learning", "Academic Leadership"],
     description: "Dr. Jyoti Sekhar Banerjee, Ph.D., serves as the Head of the CSE (AI & ML) Department at Bengal Institute of Technology, Kolkata. With nearly two decades of teaching, research, and academic leadership, he has published over 70 research papers in reputed international journals, conferences, and book chapters. A former Post-Doctoral Fellow at Nottingham Trent University (UK), he also leads the institute's R&D and IPR initiatives. Actively involved in professional bodies like ISTE, CSI, and IETE, Dr. Banerjee continues to guide the department with vision, innovation, and excellence.",
     achievements: [
-      "Ph.D. (Engg.) in Computer Science",
+      "Ph.D. in Computer Science",
       "Nearly 20 Years of Academic Excellence",
       "70+ Research Publications",
       "Post-Doctoral Fellow at Nottingham Trent University (UK)",

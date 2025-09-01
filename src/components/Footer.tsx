@@ -40,7 +40,7 @@ const Footer = () => {
               <img src={logo} alt="Synapse Logo" className="w-14 h-14 rounded-lg" />
               <div>
                 <h3 className="text-2xl font-orbitron font-bold text-gradient">
-                  Synapse
+                  PredAIction
                 </h3>
                 <p className="text-sm text-cyber-blue">Society for Next-Gen AI Perspectives & Systems in Engineering</p>
               </div>
@@ -95,7 +95,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center text-foreground/70">
                 <Mail className="w-4 h-4 mr-3 text-cyber-blue" />
-                <span className="text-sm">synapse@college.edu</span>
+                <span className="text-sm">PredAIction@college.edu</span>
               </div>
               <div className="flex items-center text-foreground/70">
                 <Phone className="w-4 h-4 mr-3 text-neon-green" />
@@ -114,7 +114,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-foreground/60 text-sm">
-                © 2025 Synapse - TBIT AIML Club. All rights reserved.
+                © 2025 PredAIction - TBIT AIML Club. All rights reserved.
               </p>
               <p className="text-foreground/40 text-xs mt-1">
                 Built with 💙 for the future of AI

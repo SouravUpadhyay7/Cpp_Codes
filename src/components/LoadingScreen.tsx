@@ -93,9 +93,9 @@ const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => void })
       <div className="relative z-10 text-center max-w-2xl px-8">
         {/* Logo/Title */}
         <div className="mb-12">
-          <h1 className="text-6xl md:text-8xl font-synapse font-black astrolab mb-4 animate-pulse-glow">
-            SYNAPSE
-          </h1>
+          <h1 className="text-3xl md:text-5xl font-synapse font-black astrolab mb-4 animate-pulse-glow">
+  PredAIction
+</h1>
           <p className="text-xl md:text-2xl font-orbitron text-cyber-blue animate-fade-in">
             AI & Machine Learning Club
           </p>

@@ -17,12 +17,12 @@ const AITerminal = () => {
 
   const commands = [
     {
-      command: 'synapse --init',
+      command: 'PredAIction --init',
       output: [
-        'Initializing SYNAPSE AI Framework...',
+        'Initializing PredAIction AI Framework...',
         'Loading neural network modules... ✓',
         'Connecting to machine learning pipeline... ✓',
-        'SYNAPSE v2.1.0 ready for deployment'
+        'PredAIction v1.1.0 ready for deployment'
       ]
     },
     {
@@ -94,7 +94,7 @@ const AITerminal = () => {
 
   const runDemo = async () => {
     setLines([]);
-    addLine('output', 'Welcome to SYNAPSE AI Terminal');
+    addLine('output', 'Welcome to PredAIction AI Terminal');
     addLine('output', 'Artificial Intelligence & Machine Learning Club');
     addLine('output', '═══════════════════════════════════════════');
     
@@ -178,7 +178,7 @@ const AITerminal = () => {
             <div className="w-3 h-3 rounded-full bg-neon-green"></div>
           </div>
           <div className="text-sm font-jetbrains text-cyber-blue">
-            SYNAPSE AI Terminal v2.1.0
+            PredAIction AI Terminal v2.1.0
           </div>
           <div className="text-xs text-foreground/60 font-jetbrains">
             {new Date().toLocaleTimeString()}
@@ -220,7 +220,7 @@ const AITerminal = () => {
         {/* Terminal Footer */}
         <div className="px-4 py-2 bg-dark-matter/30 border-t border-cyber-blue/20 text-xs text-foreground/60 font-jetbrains">
           <div className="flex justify-between">
-            <span>Connected to SYNAPSE AI Network</span>
+            <span>Connected to PredAIction AI Network</span>
             <span>Status: {isProcessing ? 'Processing...' : 'Ready'}</span>
           </div>
         </div>

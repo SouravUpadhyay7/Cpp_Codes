@@ -181,7 +181,7 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-cyber-blue mr-4" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm">synapse@college.edu</p>
+                      <p className="text-sm">PredAIction@college.edu</p>
                     </div>
                   </div>
                   
