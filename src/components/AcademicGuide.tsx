@@ -16,7 +16,7 @@ const AcademicGuide = () => {
     achievements: [
       "Ph.D. in Computer Science",
       "Nearly 20 Years of Academic Excellence",
-      "70+ Research Publications",
+      "20+ Research Publications",
       "Post-Doctoral Fellow at Nottingham Trent University (UK)",
       "Head of R&D and IPR Initiatives",
       "Active Member of ISTE, CSI, and ISTE"
