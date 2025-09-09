@@ -7,26 +7,30 @@ const AcademicGuide = () => {
   const sectionRef = useRef(null);
 
 // HOD Information
-// HOD Information
 const hod = {
   name: "Prof. (Dr.) Jyoti Sekhar Banerjee",
   role: "Associate Professor & Head, CSE (AI & ML)",
   image: hodImage,
-  description: "Dr. Jyoti Sekhar Banerjee is the Head of the CSE (AI & ML) Department at Bengal Institute of Technology, Kolkata. He also serves as Professor-in-Charge of the R&D and Consultancy Cell and Nodal Officer of the IPR Cell. With over 21 years of teaching and research experience, he has worked as a Post-Doctoral Fellow and Remote Researcher at Nottingham Trent University, UK, and is currently associated with international research groups in Greece and Malaysia. Dr. Banerjee is actively involved in professional bodies including ISTE, IETE, and CSI, where he holds leadership positions.",
+  skills: ["AI Research", "Machine Learning", "Academic Leadership"],
+ description: "Dr. Jyoti Sekhar Banerjee is the Head of the CSE (AI & ML) Department at Techno Bengal Institute of Technology, Kolkata. He also serves as Professor-in-Charge of the R&D and Consultancy Cell and Nodal Officer of the IPR Cell. With over 21 years of teaching and research experience, he has worked as a Post-Doctoral Fellow and Remote Researcher at Nottingham Trent University, UK, and is currently associated with international research groups in Greece and Malaysia. Dr. Banerjee is actively involved in professional bodies including ISTE, IETE, and CSI, where he holds leadership positions.",
   achievements: [
-    "Ph.D. in Computer Science",
-    "Post-Doctoral Fellow, Nottingham Trent University (UK)",
-    "Adjunct Research Faculty, Lincoln University College (Malaysia)",
-    "Remote Researcher, ITHACA Lab, University of Western Macedonia (Greece)",
-    "21+ Years of Teaching & Research Experience",
-    "Professor-in-Charge, R&D and Consultancy Cell",
-    "Nodal Officer, IPR Cell, BIT",
-    "Leadership Roles in ISTE, IETE, and CSI"
-  ],
-  email: "tojyoti2001@yahoo.co.in",
+  "Ph.D. in Computer Science",
+  "Post-Doctoral Fellow, Department of Computer Science, Nottingham Trent University (UK)",
+  "Former Remote Research Fellow, Cognitive Computing and Brain Informatics Research Group (CCBI), Nottingham Trent University (UK)",
+  "Adjunct Research Faculty, Lincoln Global Postdoctoral Researcher (LGPR) Programme, Lincoln University College (Malaysia)",
+  "Remote Researcher, ITHACA Lab, Department of Electrical and Computer Engineering, University of Western Macedonia (Greece)",
+  "21+ Years of Teaching & Research Experience",
+  "Completed IEI Funded Research Project",
+  "Professor-in-Charge, R&D and Consultancy Cell, BIT",
+  "Nodal Officer, IPR Cell, BIT",
+  "Secretary-cum-Treasurer, ISTE West Bengal Section",
+  "Secretary, IETE Kolkata Centre",
+  "Immediate Past Secretary, Computer Society of India (CSI), Kolkata Chapter",
+  "Vice Chairman cum Chairman Elect, CSI Kolkata Chapter (2025–2027)"
+],
+
   linkedin: "https://www.linkedin.com/in/dr-jyoti-sekhar-banerjee-6b052718b/",
 };
-
 
 
   useEffect(() => {
