@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/bg pics/logo5.png';
+import logo from '@/assets/bg pics/IDENTITY.png';
 import twitterLogo from '@/assets/Twitter.png';
 
 const Footer = () => {
