@@ -9,7 +9,7 @@ const AcademicGuide = () => {
 // HOD Information
 const hod = {
   name: "Dr. Jyoti Sekhar Banerjee",
-  role: "Head of Department - CSE ( AI & ML )",
+  role: "Head of Department",
   image: hodImage,
   skills: ["AI Research", "Machine Learning", "Academic Leadership"],
   description: "Dr. Jyoti Sekhar Banerjee, Ph.D., is the Head of the CSE ( AI & ML ) Department at Bengal Institute of Technology, Kolkata. With many years of teaching, research, and academic leadership experience, he has contributed numerous research papers to reputed international journals, conferences, and book chapters. A former Post-Doctoral Fellow at Nottingham Trent University (UK), he also leads various R&D and IPR initiatives. Dr. Banerjee continues to guide the department with vision, innovation, and excellence.",
@@ -134,7 +134,7 @@ const hod = {
                         {hod.role}
                       </p>
                       <p className="text-sm text-cyber-blue font-medium">
-                        CSE( AI & ML ) Department
+                        CSE ( AI & ML ) Department
                       </p>
                     </div>
                   </div>
