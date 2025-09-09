@@ -42,7 +42,7 @@ const Footer = () => {
                 <h3 className="text-2xl font-orbitron font-bold text-gradient">
                   PredAIction
                 </h3>
-                <p className="text-sm text-cyber-blue">Society for Next-Gen AI Perspectives & Systems in Engineering</p>
+                <p className="text-sm text-cyber-blue">Where Prediction Meets Intelligence</p>
               </div>
             </div>
             <p className="text-foreground/70 leading-relaxed mb-6 max-w-md">
