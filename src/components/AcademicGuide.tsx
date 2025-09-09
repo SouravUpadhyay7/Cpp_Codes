@@ -7,22 +7,26 @@ const AcademicGuide = () => {
   const sectionRef = useRef(null);
 
 // HOD Information
+// HOD Information
 const hod = {
-  name: "Dr. Jyoti Sekhar Banerjee",
-  role: "Head of Department",
+  name: "Prof. (Dr.) Jyoti Sekhar Banerjee",
+  role: "Associate Professor & Head, CSE (AI & ML)",
   image: hodImage,
-  skills: ["AI Research", "Machine Learning", "Academic Leadership"],
-  description: "Dr. Jyoti Sekhar Banerjee, Ph.D., is the Head of the CSE ( AI & ML ) Department at Techno Bengal Institute of Technology, Kolkata. With many years of teaching, research, and academic leadership experience, he has contributed numerous research papers to reputed international journals, conferences, and book chapters. A former Post-Doctoral Fellow at Nottingham Trent University (UK), he also leads various R&D and IPR initiatives. Dr. Banerjee continues to guide the department with vision, innovation, and excellence.",
+  description: "Dr. Jyoti Sekhar Banerjee is the Head of the CSE (AI & ML) Department at Bengal Institute of Technology, Kolkata. He also serves as Professor-in-Charge of the R&D and Consultancy Cell and Nodal Officer of the IPR Cell. With over 21 years of teaching and research experience, he has worked as a Post-Doctoral Fellow and Remote Researcher at Nottingham Trent University, UK, and is currently associated with international research groups in Greece and Malaysia. Dr. Banerjee is actively involved in professional bodies including ISTE, IETE, and CSI, where he holds leadership positions.",
   achievements: [
     "Ph.D. in Computer Science",
-    "Extensive Academic and Research Experience",
-    "Published Many Research Papers",
-    "Post-Doctoral Fellow at Nottingham Trent University (UK)",
-    "Leadership in R&D and IPR Initiatives",
-    "Active Member of Professional Bodies"
+    "Post-Doctoral Fellow, Nottingham Trent University (UK)",
+    "Adjunct Research Faculty, Lincoln University College (Malaysia)",
+    "Remote Researcher, ITHACA Lab, University of Western Macedonia (Greece)",
+    "21+ Years of Teaching & Research Experience",
+    "Professor-in-Charge, R&D and Consultancy Cell",
+    "Nodal Officer, IPR Cell, BIT",
+    "Leadership Roles in ISTE, IETE, and CSI"
   ],
+  email: "tojyoti2001@yahoo.co.in",
   linkedin: "https://www.linkedin.com/in/dr-jyoti-sekhar-banerjee-6b052718b/",
 };
+
 
 
   useEffect(() => {
