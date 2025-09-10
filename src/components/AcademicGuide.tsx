@@ -9,22 +9,18 @@ const AcademicGuide = () => {
 // HOD Information
 const hod = {
   name: "Prof. (Dr.) Jyoti Sekhar Banerjee",
-  role: "Associate Professor & Head, CSE (AI & ML)",
+  role: "Associate Professor & HOD, CSE (AI & ML)",
   image: hodImage,
   skills: ["AI Research", "Machine Learning", "Academic Leadership"],
  description:"Dr. Jyoti Sekhar Banerjee is the Head of the CSE (AI & ML) Department at Techno Bengal Institute of Technology, Kolkata. He also serves as Professor-in-Charge of the R&D and Consultancy Cell and Nodal Officer of the IPR Cell. With over 21 years of teaching and research experience, he has worked as a Remote Researcher at Nottingham Trent University, UK, and is currently associated with international research groups in Greece and Malaysia. Dr. Banerjee is actively involved in professional bodies including ISTE, IETE, and CSI, where he holds leadership positions.",
   achievements: [
   "Ph.D. in Engineering",
-  "Former Remote Research Fellow, Cognitive Computing and Brain Informatics Research Group (CCBI), Nottingham Trent University (UK)",
-  "Adjunct Research Faculty, Lincoln Global Postdoctoral Researcher (LGPR) Programme, Lincoln University College (Malaysia)",
-  "Remote Researcher, ITHACA Lab, Department of Electrical and Computer Engineering, University of Western Macedonia (Greece)",
-  "21+ Years of Teaching & Research Experience",
-  "Completed IEI Funded Research Project",
-  "Nodal Officer, IPR Cell & Member, R&D and Consultancy Cell, TBIT",
-  "Secretary-cum-Treasurer, ISTE West Bengal Section",
-  "Secretary, IETE Kolkata Centre",
-  "Immediate Past Secretary, Computer Society of India (CSI), Kolkata Chapter",
-  "Vice Chairman cum Chairman Elect, CSI Kolkata Chapter (2025–2027)"
+  "21+ years of teaching & research experience",
+  "Head of Department CSE (AI&ML), R&D & Consultancy Cell TBIT, Kolkata",
+  "Nodal Officer, IPR Cell",
+  "Adjunct Research Faculty, Lincoln University College (Malaysia)",
+  "Remote Researcher, ITHACA Lab, University of Western Macedonia (Greece)",
+  "Leadership roles in ISTE, IETE & CSI (Vice Chair, CSI Kolkata 2025–27)"
 ],
 
   linkedin: "https://www.linkedin.com/in/dr-jyoti-sekhar-banerjee-6b052718b/",
