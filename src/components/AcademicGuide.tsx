@@ -18,9 +18,9 @@ const hod = {
   "21+ years of teaching & research experience",
   "Head of Department CSE (AI&ML), R&D & Consultancy Cell TBIT, Kolkata",
   "Nodal Officer, IPR Cell",
-  "Adjunct Research Faculty, Lincoln University College (Malaysia)",
-  "Remote Researcher, ITHACA Lab, University of Western Macedonia (Greece)",
-  "Leadership roles in ISTE, IETE & CSI (Vice Chair, CSI Kolkata 2025–27)"
+  "Adjunct Research Faculty, Lincoln University College Malaysia",
+  "Remote Researcher, ITHACA Lab, University of Western Macedonia Greece",
+  "Leadership roles in ISTE, IETE & CSI Vice Chief, CSI Kolkata 2025–27"
 ],
 
   linkedin: "https://www.linkedin.com/in/dr-jyoti-sekhar-banerjee-6b052718b/",
