@@ -38,13 +38,18 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center px-4 max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="space-y-6">
-          <h1 className="text-[clamp(1.75rem,6vw,4rem)] font-synapse font-black astrolab astrolab-geometric">
+          <h1 className="text-[clamp(1.75rem,6vw,5rem)] font-synapse font-black astrolab astrolab-geometric">
   PredAIction
 </h1>
 
-          <h2 className="text-2xl md:text-3xl font-jetbrains font-bold text-gradient leading-tight">
-           The Official AIML Club of TBIT
-          </h2>
+          <h2 className="text-2xl md:text-4xl font-jetbrains font-bold leading-tight text-center">
+  The Official AIML Club of
+  <br />
+  <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+    Techno Bengal Institute of Technology
+  </span>
+</h2>
+
           <p className="text-base md:text-2xl font-space text-cyber-blue font-medium tracking-wide">
             Under the Department of CSE( AI & ML )
           </p>
